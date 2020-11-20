@@ -2,13 +2,19 @@
 #include "ui_gestion_film.h"
 #include <QString>
 #include "cruds_films.h"
+#include <QSound>
+#include <QDebug>
 #include <QMessageBox>
+#include <QThread>
+#include<QPixmap>
+#include <QGridLayout>
 gestion_film::gestion_film(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gestion_film)
 {
     ui->setupUi(this);
     ui->tableView->setModel(tempfilm.afficher());
+    player= new QMediaPlayer(this);
 }
 
 gestion_film::~gestion_film()
@@ -30,6 +36,10 @@ void gestion_film::on_ajouter_film_clicked()
     bool test = c.ajouter();
     if (test)
     {
+        player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film ajouter.mp3"));
+            player->play();
+            qDebug()<<player->errorString();
+            QThread::sleep(1);
         ui->tableView->setModel(tempfilm.afficher());
         QMessageBox::information(nullptr,"AJOUT FILM","FILM AJOUTEE");
     }
@@ -46,6 +56,10 @@ void gestion_film::on_pushButton_supprimer_clicked()
     bool test = tempfilm.supprimer(i);
     if (test)
     {
+        player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film supprimer.mp3"));
+            player->play();
+            qDebug()<<player->errorString();
+            QThread::sleep(1);
         ui->tableView->setModel(tempfilm.afficher());
         QMessageBox::information(nullptr,"SUPPRIMER FILM","FILM SUPPRIMER !");
     }
@@ -54,24 +68,93 @@ void gestion_film::on_pushButton_supprimer_clicked()
         QMessageBox::warning(nullptr,"SUPPRIMER FILM","FILM NON SUPPRIMER !");
     }
 }
-//
 void gestion_film::on_pushButton_modifier_clicked()
 {
-    QString nom1 = ui->lineEdit_nouveau_nom->text();
-    QString language1= ui->lineEdit_nouveau_language->text();
+    QString n = ui->lineEdit_nouveau_nom->text();
+    QString l= ui->lineEdit_nouveau_language->text();
      int i = ui->lineEdit_id->text().toInt();
-     QString type1 = ui->lineEdit_nouveau_type->text();
-      int duree1 = ui->lineEdit_nouveau_duree->text().toInt();
+     QString t = ui->lineEdit_nouveau_type->text();
+      int d = ui->lineEdit_nouveau_duree->text().toInt();
+    cruds_films c(n,l,d,i,t);
+    bool test = c.modifier();
+         if (test)
+         {
+             player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film modifier.mp3"));
+                 player->play();
+                 qDebug()<<player->errorString();
+                 QThread::sleep(1);
+             ui->tableView->setModel(tempfilm.afficher());
+             QMessageBox::information(nullptr,"MODIFER CLIENT","MODFIER AJOUTEE");
+         }
+         else
+         {
+             QMessageBox::warning(nullptr,"MODIFER CLIENT","CLIENT NON MODIFER");
+         }
+}
 
-     cruds_films c(nom1,language1,duree1,i,type1);
-     bool test = c.modifier(nom1,language1,duree1,i,type1);
-     if (test)
-     {
-         ui->tableView->setModel(tempfilm.afficher());
-         QMessageBox::information(nullptr,"MODIFIER FILM","FILM MODIFIER");
-     }
-     else
-     {
-         QMessageBox::warning(nullptr,"MODIFIER FILM","FILM NON MODIFIER");
-     }
+
+
+void gestion_film::on_checkBox_nom_clicked()
+{
+    bool test = true;
+          if (test)
+              {
+              ui->tableView->setModel(tempfilm.afficher());
+
+                  ui->tableView->setModel(tempfilm.trier_nom());
+              }
+
+          else
+          {
+              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+                                    QObject::tr("Erreur !.\n"));
+          }
+}
+
+
+void gestion_film::on_checkBox_duree_clicked()
+{
+    bool test = true;
+          if (test)
+              {
+              ui->tableView->setModel(tempfilm.afficher());
+
+                  ui->tableView->setModel(tempfilm.trier_duree());
+              }
+
+          else
+          {
+              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+                                    QObject::tr("Erreur !.\n"));
+          }
+}
+void gestion_film::on_checkBox_language_clicked()
+{
+    bool test = true;
+          if (test)
+              {
+              ui->tableView->setModel(tempfilm.afficher());
+
+                  ui->tableView->setModel(tempfilm.trier_id());
+              }
+
+          else
+          {
+              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+                                    QObject::tr("Erreur !.\n"));
+          }
+}
+
+void gestion_film::on_pushButton_3_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/chercher.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(1);
+     ui->tableView->setModel(tempfilm.afficher());
+    QString nom = ui->lineEdit->text();
+   ui->tableView_2->setModel(tempfilm.afficher_nom(nom));
+
+
+
 }

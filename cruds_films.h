@@ -22,7 +22,14 @@ public:
        bool ajouter();
        bool supprimer(int);
        QSqlQueryModel *afficher();
-       bool modifier(QString,QString,int,int,QString);
+       QSqlQueryModel *afficher_nom(QString);
+       QSqlQueryModel *trier_nom();
+       QSqlQueryModel *trier_duree();
+       QSqlQueryModel *trier_id();
+
+
+
+       bool modifier();
 
 };
 

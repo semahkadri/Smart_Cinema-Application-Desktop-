@@ -3,6 +3,7 @@
 #include "cruds_films.h"
 #include <QMessageBox>
 #include <QDialog>
+#include <QMediaPlayer>
 
 namespace Ui {
 class gestion_film;
@@ -25,9 +26,21 @@ private slots:
 
     void on_pushButton_modifier_clicked();
 
+    void on_pushButton_tri_clicked();
+
+    void on_checkBox_nom_clicked();
+
+    void on_checkBox_duree_clicked();
+
+    void on_checkBox_language_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::gestion_film *ui;
     cruds_films tempfilm;
+    QMediaPlayer* player;
+
 };
 
 #endif // GESTION_FILM_H

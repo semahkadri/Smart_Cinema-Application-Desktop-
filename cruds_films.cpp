@@ -17,7 +17,7 @@ bool cruds_films::ajouter()
     QSqlQuery query;
     query.prepare("INSERT INTO GESTION (nom,duree,language,type,id) VALUES (:nom,:duree,:language,:type,:id)");
     QString res= QString::number(id);
-    query.bindValue(":id",id);
+    query.bindValue(":id",res);
     query.bindValue(":nom",nom);
     query.bindValue(":language",language);
     query.bindValue(":duree",duree);
@@ -43,17 +43,66 @@ QSqlQueryModel * cruds_films::afficher()
     model->setHeaderData(4,Qt::Horizontal,"ID");
     return model ;
 }
-//
-bool cruds_films::modifier(QString nom1,QString language1,int duree1,int id,QString type1)
+
+
+QSqlQueryModel * cruds_films::afficher_nom(QString nom)
 {
-    QSqlQuery query;
-    query.prepare("UPDATE GESTION SET NOM = :nom , DUREE = :duree LANGUAGE = :language, TYPE= :type  WHERE (ID = :id) ");
-    QString res= QString::number(id);
-    query.bindValue(":id",id);
-    query.bindValue(":nom",nom1);
-    query.bindValue(":language",language1);
-    query.bindValue(":duree",duree1);
-    query.bindValue(":type",type1);
-    return query.exec();
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery("select * from GESTION WHERE id = '"+nom+"'");
+    model->setHeaderData(0,Qt::Horizontal,"NOM");
+    model->setHeaderData(1,Qt::Horizontal,"DUREE");
+    model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
+    model->setHeaderData(3,Qt::Horizontal,"TYPE");
+    model->setHeaderData(4,Qt::Horizontal,"ID");
+    return model ;
 }
 //
+
+bool cruds_films::modifier()
+{
+    QSqlQuery query;
+    query.prepare("UPDATE GESTION SET nom=:nom,duree=:duree,language=:language,type=:type WHERE id=:id");
+    QString res= QString::number(id);
+    query.bindValue(":id",id);
+    query.bindValue(":nom",nom);
+    query.bindValue(":language",language);
+    query.bindValue(":duree",duree);
+    query.bindValue(":type",type);
+    return query.exec();
+}
+QSqlQueryModel * cruds_films::trier_id()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        model->setQuery("SELECT * from GESTION ORDER BY id");
+        model->setHeaderData(0,Qt::Horizontal,"NOM");
+        model->setHeaderData(1,Qt::Horizontal,"DUREE");
+        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
+        model->setHeaderData(3,Qt::Horizontal,"TYPE");
+        model->setHeaderData(4,Qt::Horizontal,"ID");
+        return model ;
+}
+QSqlQueryModel * cruds_films::trier_nom()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        model->setQuery("SELECT * from GESTION ORDER BY nom");
+        model->setHeaderData(0,Qt::Horizontal,"NOM");
+        model->setHeaderData(1,Qt::Horizontal,"DUREE");
+        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
+        model->setHeaderData(3,Qt::Horizontal,"TYPE");
+        model->setHeaderData(4,Qt::Horizontal,"ID");
+        return model ;
+}
+QSqlQueryModel * cruds_films::trier_duree()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        model->setQuery("SELECT * from GESTION ORDER BY duree");
+        model->setHeaderData(0,Qt::Horizontal,"NOM");
+        model->setHeaderData(1,Qt::Horizontal,"DUREE");
+        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
+        model->setHeaderData(3,Qt::Horizontal,"TYPE");
+        model->setHeaderData(4,Qt::Horizontal,"ID");
+        return model ;
+}
+
+
+

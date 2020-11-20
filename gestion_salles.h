@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <QDialog>
 #include "cruds_salles.h"
-
+#include <QMediaPlayer>
 
 namespace Ui {
 class gestion_salles;
@@ -22,9 +22,15 @@ private slots:
 
     void on_pushButton_supprimer_chaise_clicked();
 
+    void on_pushButton_modifier_clicked();
+
+    void on_checkBox_clicked();
+
 private:
     Ui::gestion_salles *ui;
     cruds_salles tempsalles;
+     QMediaPlayer* player;
+
 };
 
 #endif // GESTION_SALLES_H

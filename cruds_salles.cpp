@@ -40,3 +40,24 @@ QSqlQueryModel * cruds_salles::afficher()
     model->setHeaderData(3,Qt::Horizontal,"ID");
     return model ;
 }
+bool cruds_salles::modifier()
+{
+    QSqlQuery query;
+    query.prepare("UPDATE GESTIONN SET taille=:taille,mark=:mark,qualite=:qualite WHERE id=:id");
+    QString res= QString::number(id);
+    query.bindValue(":id",id);
+    query.bindValue(":taille",taille);
+    query.bindValue(":mark",mark);
+    query.bindValue(":qualite",qualite);
+    return query.exec();
+}
+QSqlQueryModel * cruds_salles::trier_id()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        model->setQuery("SELECT * from GESTIONN ORDER BY id");
+        model->setHeaderData(0,Qt::Horizontal,"TAILLE");
+        model->setHeaderData(1,Qt::Horizontal,"MARK");
+        model->setHeaderData(2,Qt::Horizontal,"QUALITE");
+        model->setHeaderData(3,Qt::Horizontal,"ID");
+        return model ;
+}
