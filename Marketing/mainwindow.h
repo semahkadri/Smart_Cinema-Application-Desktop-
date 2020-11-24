@@ -23,7 +23,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void afficher();
+    void afficher2();
 
 private slots:
 

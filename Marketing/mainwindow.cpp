@@ -53,6 +53,8 @@ MainWindow::MainWindow(QWidget *parent)
     son=new QSound(":/music.wav");
     son->play();
     ui->tableEvent->setModel(tmpevenement.afficher());
+    ui->tableRes->setModel(tmpreservation.afficher2());
+
     ui->stackedWidget->setCurrentIndex(1);
     ui->comboBox->addItem("Classic");
     ui->comboBox->addItem("Cosplay");
@@ -128,6 +130,30 @@ void MainWindow::on_modifier_3_clicked()
 
 }
 
+void MainWindow::afficher()
+{
+
+    Connection c;
+    QSqlQueryModel* modal = new QSqlQueryModel();
+    QSqlQuery* qry=new QSqlQuery(c.get_db());
+    qry->prepare("SELECT* from evenement");
+    qry->exec();
+    modal->setQuery(*qry);
+    ui->tableEvent->setModel(modal);
+}
+
+void MainWindow::afficher2()
+{
+
+    Connection c;
+    QSqlQueryModel* modal = new QSqlQueryModel();
+    QSqlQuery* qry=new QSqlQuery(c.get_db());
+    qry->prepare("SELECT* from reservation");
+    qry->exec();
+    modal->setQuery(*qry);
+    ui->tableRes->setModel(modal);
+}
+
 void MainWindow::on_ajouter_event_clicked()
 {
     QString nom_event= ui->lineEdit_nom_event->text();
@@ -156,14 +182,13 @@ void MainWindow::on_ajouter_event_clicked()
 
 void MainWindow::on_modifier_2_clicked()
 {
-        QString nom_event= ui->lineEdit_nouv_nom->text();
-        int id_event = ui->lineEdit_id_event->text().toInt();
-        int id_salle=ui->lineEdit_id_salle->text().toInt();
-        QString type_event=ui->comboBox2->currentText();
-        QDateTime time=ui->dateEdit->dateTime();
+        QString nom_event= ui->lineEdit_nouv_nom->text();  //lineEdit_nouv_nom
+        int id_event = ui->lineEdit_id_event->text().toInt(); //lineEdit_id_eventmodif
+        int id_salle=ui->lineEdit_nouv_idsalle->text().toInt(); //lineEdit_nouv_idsalle
+        QString type_event=ui->comboBox2->currentText(); //comboBox2
+        QDateTime time=ui->dateEdit_4->dateTime();
         evenement e(id_event,nom_event,type_event,id_salle,time);
-
-        bool test=e.modifier(id_event,nom_event,type_event,id_salle,time);
+         bool test=e.modifier(id_event,nom_event,type_event,id_salle,time);
         if(test)
         {
             ui->tableEvent->setModel(tmpevenement.afficher());//refresh
@@ -358,7 +383,7 @@ void MainWindow::uglyPrint(QPrinter *printer) {
     uglyTablePrinter.setPagePrepare(printB);
     QVector<QString> headers = QVector<QString>() << "id_reservation" << "id_film" << "id_event2" << "nombre_place"<<"date_reservation";
     uglyPainter.setPen(QPen(Qt::yellow));
-    uglyPainter.drawText(uglyPainter.viewport().width()/2 - 40, 40, "TABLE PROMOTION");
+    uglyPainter.drawText(uglyPainter.viewport().width()/2 - 40, 40, "TABLE Reservation");
     uglyPainter.translate(0, 60); // start print point
     uglyTablePrinter.setCellMargin(10, 5, 5, 5);
     uglyTablePrinter.setPageMargin(100, 40, 40, 40);
@@ -494,11 +519,11 @@ void MainWindow::on_ajouter_res_clicked()
 
 void MainWindow::on_modifier_clicked()
 {
-    int id_reservation = ui->lineEdit_idmodif->text().toInt();
-    int id_film=ui->lineEdit_nouvfilm->text().toInt();
-    int id_event2=ui->lineEdit_id_eventmodif_2->text().toInt();
-    QString nombre_place=ui->comboBox_4->currentText();
-    QDateTime date_reservation=ui->dateEdit_3->dateTime();
+    int id_reservation = ui->lineEdit_idmodif->text().toInt();//lineEdit_idmodif
+    int id_film=ui->lineEdit_nouvfilm->text().toInt();//lineEdit_nouvfilm
+    int id_event2=ui->lineEdit_id_eventmodif_2->text().toInt();//lineEdit_id_eventmodif_2
+    QString nombre_place=ui->comboBox_4->currentText();//comboBox_4
+    QDateTime date_reservation=ui->dateEdit_3->dateTime(); //dateEdit_3
 
     reservation r(id_reservation,id_film,id_event2,nombre_place,date_reservation);
 
