@@ -33,6 +33,7 @@ bool evenement::ajouter()
     query.bindValue(":id_salle",ress);
     query.bindValue(":time",time);
     return query.exec();
+
 }
 
 bool evenement::supprimer(int i)

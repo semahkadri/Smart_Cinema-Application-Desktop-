@@ -76,7 +76,7 @@ QSqlQueryModel *  reservation::chercher(int id_reservation)
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     QString res=QString::number(id_reservation);
-    model->setQuery("SELECT * FROM reservation WHERE (id_reservation LIKE '"+res+"%' ) ");
+    model->setQuery("SELECT * FROM reservation WHERE (id_reservation LIKE '"+res+"' ) ");
     return  model;
 
 
