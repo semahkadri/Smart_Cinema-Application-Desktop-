@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     {
         login l;
         l.show();
+        w.afficher();
+        w.afficher2();
         QObject::connect(&l,&login::sig,&w,&MainWindow::show);
 
         return a.exec();

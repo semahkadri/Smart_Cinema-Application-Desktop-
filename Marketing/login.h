@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "mainwindow.h"
 #include <QSound>
+#include <QPropertyAnimation>
 
 namespace Ui {
 class login;
@@ -26,6 +27,7 @@ private:
     Ui::login *ui;
     MainWindow *m;
     QSound *son;
+    QPropertyAnimation *animation;
 };
 
 #endif // LOGIN_H

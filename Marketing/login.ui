@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>874</width>
-    <height>525</height>
+    <width>939</width>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,8 +50,8 @@ border-bottom:1px solid #717072;
     <rect>
      <x>170</x>
      <y>50</y>
-     <width>491</width>
-     <height>421</height>
+     <width>541</width>
+     <height>511</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -63,8 +63,8 @@ border-bottom:1px solid #717072;
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>340</y>
+      <x>80</x>
+      <y>400</y>
       <width>361</width>
       <height>61</height>
      </rect>
@@ -76,8 +76,8 @@ border-bottom:1px solid #717072;
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>100</y>
+      <x>110</x>
+      <y>140</y>
       <width>301</width>
       <height>61</height>
      </rect>
@@ -98,8 +98,8 @@ border-bottom:1px solid #717072;
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>190</y>
+      <x>110</x>
+      <y>250</y>
       <width>301</width>
       <height>71</height>
      </rect>
@@ -133,10 +133,10 @@ border-bottom:1px solid #717072;
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>480</y>
+     <x>360</x>
+     <y>570</y>
      <width>131</width>
-     <height>41</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -162,7 +162,7 @@ background:#ffaa00;
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>370</x>
      <y>10</y>
      <width>121</width>
      <height>111</height>

@@ -1,6 +1,8 @@
 #include "login.h"
 #include "ui_login.h"
 #include <QMessageBox>
+
+
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
@@ -8,6 +10,16 @@ login::login(QWidget *parent) :
     ui->setupUi(this);
     son = new QSound("::/music.wav");
     son->play();
+    animation = new QPropertyAnimation(ui->pushButton_3,"geometry");
+    animation->setDuration(30000);
+    animation->setStartValue(ui->pushButton_3->geometry());
+    animation->setEndValue(QRectF(600,600,45,30));
+
+    QEasingCurve curve;
+    curve.setType(QEasingCurve::OutBounce);
+    animation->setEasingCurve(curve);
+
+    animation->start();
 }
 
 login::~login()
@@ -22,7 +34,7 @@ void login::on_pushButton_clicked()
     if(username =="semah"&& password=="esprit")
     {QMessageBox::information(this,"login","Login correct");
         hide();
-        emit sig();
+       emit sig();
     }
     else {
         QMessageBox::warning(this,"login","username or password incorrect");

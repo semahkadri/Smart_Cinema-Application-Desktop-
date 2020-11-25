@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QGroupBox" name="groupBox">
@@ -102,18 +102,21 @@ QTabWidget
        <property name="geometry">
         <rect>
          <x>440</x>
-         <y>470</y>
+         <y>530</y>
          <width>111</width>
          <height>41</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton
-{
-background:#55007f;
-border-radius:60px;
-}
-
+{background:#aa0000;
+border-radius:15px;}
 QPushButton
 {
 color:white;
@@ -121,12 +124,10 @@ border-radius:15px;
 }
 QPushButton:hover
 {
-color:white;
+color:#ff557f;
 border-radius:15px;
-background:#000000;
-}
-
-</string>
+background:#ffaa00;
+}</string>
        </property>
        <property name="text">
         <string>Quitter</string>
@@ -156,7 +157,7 @@ font-family:century gothic;
 font-size:12px;}
 QPushButton
 {
-background:#ff557f;
+background:#008BEA;
 border-radius:60px;
 }
 
@@ -169,7 +170,7 @@ QPushButton:hover
 {
 color:black;
 border-radius:15px;
-background:rgb(197, 250, 255);
+background:#ffaaff;
 }
 /**{
 background-image: url(:/cinema.png);
@@ -205,10 +206,16 @@ border-bottom:1px solid #717072;
 
 QWiget
 {color :white;
-}</string>
+}
+
+QTabWidget{background:transparent} QTabWidget::pane{border: 1px;border-color:red;background-color: transparent;} 
+QTabBar::tab {background-color: transparent;color: #ccc;width: 220px;height:42px;font-size:14px} 
+QTabBar::tab:hover{background-color:#ddd; color: white;}
+QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
+/*QWidget{background:transparent}*/</string>
        </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <property name="documentMode">
         <bool>false</bool>
@@ -229,11 +236,19 @@ QWiget
         <widget class="QPushButton" name="ajouter_res">
          <property name="geometry">
           <rect>
-           <x>440</x>
+           <x>450</x>
            <y>340</y>
            <width>121</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>AJOUTER</string>
@@ -242,8 +257,8 @@ QWiget
         <widget class="QLabel" name="label_date_res">
          <property name="geometry">
           <rect>
-           <x>150</x>
-           <y>260</y>
+           <x>140</x>
+           <y>270</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -260,7 +275,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>200</y>
+           <y>210</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -277,7 +292,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>80</y>
+           <y>90</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -294,6 +309,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -302,7 +320,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>80</y>
+           <y>90</y>
            <width>51</width>
            <height>31</height>
           </rect>
@@ -319,7 +337,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>160</x>
-           <y>30</y>
+           <y>40</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -336,7 +354,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>30</y>
+           <y>40</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -353,6 +371,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -361,7 +382,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>140</y>
+           <y>150</y>
            <width>101</width>
            <height>31</height>
           </rect>
@@ -378,7 +399,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>140</y>
+           <y>150</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -395,6 +416,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -403,7 +427,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>310</x>
-           <y>200</y>
+           <y>210</y>
            <width>181</width>
            <height>31</height>
           </rect>
@@ -454,9 +478,9 @@ background:#ffaa7f;</string>
         <widget class="QDateEdit" name="dateEdit_2">
          <property name="geometry">
           <rect>
-           <x>320</x>
-           <y>260</y>
-           <width>171</width>
+           <x>310</x>
+           <y>270</y>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
@@ -477,6 +501,16 @@ color:black;
 border-radius:15px;
 background:#ff5500;
 }</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>11</month>
+           <day>20</day>
+          </date>
          </property>
         </widget>
        </widget>
@@ -544,7 +578,8 @@ color:white;
          </property>
          <property name="styleSheet">
           <string notr="true">color:white;
-border-radius:15px;</string>
+border-radius:15px;
+background:#ffaa00;</string>
          </property>
          <property name="text">
           <string>ID reservation :</string>
@@ -571,6 +606,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -580,7 +618,7 @@ border-radius:15px;</string>
           <rect>
            <x>300</x>
            <y>190</y>
-           <width>181</width>
+           <width>191</width>
            <height>31</height>
           </rect>
          </property>
@@ -596,6 +634,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -605,7 +646,7 @@ border-radius:15px;</string>
           <rect>
            <x>100</x>
            <y>250</y>
-           <width>171</width>
+           <width>181</width>
            <height>31</height>
           </rect>
          </property>
@@ -622,7 +663,7 @@ border-radius:15px;</string>
           <rect>
            <x>110</x>
            <y>190</y>
-           <width>151</width>
+           <width>161</width>
            <height>31</height>
           </rect>
          </property>
@@ -637,7 +678,7 @@ border-radius:15px;</string>
         <widget class="QLabel" name="label_nouvfilm">
          <property name="geometry">
           <rect>
-           <x>140</x>
+           <x>130</x>
            <y>130</y>
            <width>111</width>
            <height>31</height>
@@ -656,7 +697,7 @@ border-radius:15px;</string>
           <rect>
            <x>300</x>
            <y>130</y>
-           <width>181</width>
+           <width>191</width>
            <height>31</height>
           </rect>
          </property>
@@ -672,6 +713,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -681,9 +725,17 @@ border-radius:15px;</string>
           <rect>
            <x>600</x>
            <y>180</y>
-           <width>121</width>
-           <height>31</height>
+           <width>131</width>
+           <height>41</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>MODIFIER</string>
@@ -692,7 +744,7 @@ border-radius:15px;</string>
         <widget class="QLabel" name="label_nouvnum">
          <property name="geometry">
           <rect>
-           <x>90</x>
+           <x>100</x>
            <y>310</y>
            <width>181</width>
            <height>31</height>
@@ -733,11 +785,19 @@ background:#ffaa7f;</string>
         <widget class="QComboBox" name="comboBox_4">
          <property name="geometry">
           <rect>
-           <x>300</x>
+           <x>310</x>
            <y>250</y>
            <width>181</width>
            <height>31</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QComboBox
@@ -761,11 +821,19 @@ background:#ff5500;
         <widget class="QDateEdit" name="dateEdit_3">
          <property name="geometry">
           <rect>
-           <x>300</x>
+           <x>310</x>
            <y>310</y>
            <width>181</width>
            <height>31</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QDateEdit
@@ -784,6 +852,16 @@ color:black;
 border-radius:15px;
 background:#ff5500;
 }</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>11</month>
+           <day>20</day>
+          </date>
          </property>
         </widget>
        </widget>
@@ -893,6 +971,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -903,16 +984,16 @@ border-radius:15px;</string>
            <x>350</x>
            <y>164</y>
            <width>121</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>century gothic</family>
            <pointsize>-1</pointsize>
-           <weight>50</weight>
+           <weight>75</weight>
            <italic>false</italic>
-           <bold>false</bold>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -1026,6 +1107,9 @@ color:white;
          <property name="styleSheet">
           <string notr="true">border-radius:15px;
 </string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1227,7 +1311,7 @@ font-family:century gothic;
 font-size:12px;}
 QPushButton
 {
-background:#ff557f;
+background:#008BEA;
 border-radius:60px;
 }
 
@@ -1240,7 +1324,7 @@ QPushButton:hover
 {
 color:black;
 border-radius:15px;
-background:rgb(197, 250, 255);
+background:#ffaaff;
 }
 /**{
 background-image: url(:/cinema.png);
@@ -1276,10 +1360,16 @@ border-bottom:1px solid #717072;
 
 QWiget
 {color :white;
-}</string>
+}
+
+QTabWidget{background:transparent} QTabWidget::pane{border: 1px;border-color:red;background-color: transparent;} 
+QTabBar::tab {background-color: transparent;color: #ccc;width: 220px;height:42px;font-size:14px} 
+QTabBar::tab:hover{background-color:#ddd; color: white;}
+QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
+/*QWidget{background:transparent}*/</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="Ajouter_2">
         <attribute name="title">
@@ -1411,6 +1501,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -1438,8 +1531,16 @@ border-radius:15px;</string>
            <x>500</x>
            <y>310</y>
            <width>121</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>AJOUTER</string>
@@ -1464,6 +1565,9 @@ border-radius:15px;</string>
          </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1504,6 +1608,16 @@ color:black;
 border-radius:15px;
 background:#ff5500;
 }</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>11</month>
+           <day>21</day>
+          </date>
          </property>
         </widget>
         <widget class="QComboBox" name="comboBox">
@@ -1551,7 +1665,7 @@ background:#ff5500;
          <property name="geometry">
           <rect>
            <x>160</x>
-           <y>130</y>
+           <y>80</y>
            <width>71</width>
            <height>31</height>
           </rect>
@@ -1564,7 +1678,8 @@ background:#ff5500;
          </property>
          <property name="styleSheet">
           <string notr="true">color:white;
-border-radius:15px;</string>
+border-radius:15px;
+background:#ffaa00;</string>
          </property>
          <property name="text">
           <string>ID event:</string>
@@ -1574,7 +1689,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>240</x>
-           <y>60</y>
+           <y>30</y>
            <width>231</width>
            <height>31</height>
           </rect>
@@ -1610,8 +1725,16 @@ color:white;
            <x>560</x>
            <y>294</y>
            <width>121</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>MODIFIER</string>
@@ -1621,7 +1744,7 @@ color:white;
          <property name="geometry">
           <rect>
            <x>290</x>
-           <y>133</y>
+           <y>80</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -1637,6 +1760,9 @@ color:white;
          <property name="styleSheet">
           <string notr="true">border-radius:15px;
 </string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1646,14 +1772,31 @@ color:white;
          <property name="geometry">
           <rect>
            <x>130</x>
-           <y>180</y>
-           <width>131</width>
+           <y>200</y>
+           <width>141</width>
            <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color:white;
-border-radius:15px;</string>
+border-radius:15px;
+QLineEdit
+{
+background:#ffaa7f;
+border-radius:60px;
+}
+
+QLineEdit
+{
+color:black;
+border-radius:15px;
+}
+QLineEdit:hover
+{
+color:white;
+border-radius:15px;
+background:#ff5500;
+}</string>
          </property>
          <property name="text">
           <string>Nouveau Type event :</string>
@@ -1663,14 +1806,31 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>235</y>
-           <width>91</width>
+           <y>140</y>
+           <width>101</width>
            <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">color:white;
-border-radius:15px;</string>
+border-radius:15px;
+QLineEdit
+{
+background:#ffaa7f;
+border-radius:60px;
+}
+
+QLineEdit
+{
+color:black;
+border-radius:15px;
+}
+QLineEdit:hover
+{
+color:white;
+border-radius:15px;
+background:#ff5500;
+}</string>
          </property>
          <property name="text">
           <string>Nouveau nom :</string>
@@ -1680,7 +1840,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>290</x>
-           <y>240</y>
+           <y>140</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -1697,6 +1857,9 @@ border-radius:15px;</string>
           <string notr="true">border-radius:15px;
 </string>
          </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -1705,7 +1868,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>290</x>
-           <y>180</y>
+           <y>200</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -1735,6 +1898,131 @@ color:black;
 border-radius:15px;
 background:#ff5500;
 }</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id_event_3">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>260</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;
+QLineEdit
+{
+background:#ffaa7f;
+border-radius:60px;
+}
+
+QLineEdit
+{
+color:black;
+border-radius:15px;
+}
+QLineEdit:hover
+{
+color:white;
+border-radius:15px;
+background:#ff5500;
+}</string>
+         </property>
+         <property name="text">
+          <string>Nouveau ID Salle :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_date_event_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>310</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string>Nouveau date event :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_nouv_idsalle">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>260</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="dateEdit_4">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>310</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDateEdit
+{
+background:#ffaa7f;
+border-radius:60px;
+}
+
+QDateEdit{
+color:black;
+border-radius:15px;
+}
+QDateEdit:hover
+{
+color:black;
+border-radius:15px;
+background:#ff5500;
+}</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>11</month>
+           <day>20</day>
+          </date>
          </property>
         </widget>
        </widget>
@@ -1805,16 +2093,16 @@ border-radius:15px;</string>
            <x>350</x>
            <y>210</y>
            <width>121</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>century gothic</family>
            <pointsize>-1</pointsize>
-           <weight>50</weight>
+           <weight>75</weight>
            <italic>false</italic>
-           <bold>false</bold>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -2016,19 +2304,22 @@ background:rgb(197, 250, 255);
       <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
         <rect>
-         <x>410</x>
-         <y>450</y>
+         <x>440</x>
+         <y>510</y>
          <width>101</width>
          <height>41</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton
-{
-background:#55007f;
-border-radius:60px;
-}
-
+{background:#aa0000;
+border-radius:15px;}
 QPushButton
 {
 color:white;
@@ -2036,12 +2327,10 @@ border-radius:15px;
 }
 QPushButton:hover
 {
-color:white;
+color:#ff557f;
 border-radius:15px;
-background:#000000;
-}
-
-</string>
+background:#ffaa00;
+}</string>
        </property>
        <property name="text">
         <string>Quitter</string>
