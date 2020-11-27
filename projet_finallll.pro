@@ -1,6 +1,6 @@
-QT       += core gui sql gui multimedia multimediawidgets
+QT       += core gui sql gui multimedia multimediawidgets printsupport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia core
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia core printsupport
 
 CONFIG += c++11 console
 
@@ -14,6 +14,7 @@ SOURCES += \
     cruds_salles.cpp \
     gestion_film.cpp \
     gestion_salles.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -23,11 +24,13 @@ HEADERS += \
     cruds_salles.h \
     gestion_film.h \
     gestion_salles.h \
+    login.h \
     mainwindow.h
 
 FORMS += \
     gestion_film.ui \
     gestion_salles.ui \
+    login.ui \
     mainwindow.ui
 
 # Default rules for deployment.
@@ -36,4 +39,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resource.qrc
+    mouna.qrc

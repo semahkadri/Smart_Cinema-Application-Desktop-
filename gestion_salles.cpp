@@ -105,3 +105,35 @@ void gestion_salles::on_checkBox_clicked()
                                     QObject::tr("Erreur !.\n"));
           }
 }
+
+void gestion_salles::on_pushButton_3_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/chercherr.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(1);
+    ui->tableView->setModel(tempsalles.afficher());
+    QString taille = ui->lineEdit->text();
+  ui->tableView_2->setModel(tempsalles.afficher_taille(taille));
+}
+
+void gestion_salles::on_pushButton_4_clicked()
+{
+    ui->tableView->setModel(tempsalles.afficher());
+    QString taille = ui->lineEdit_id_chaise->text();
+  ui->tableView_3->setModel(tempsalles.afficher_taille(taille));
+}
+
+void gestion_salles::on_pushButton_5_clicked()
+{
+    ui->tableView->setModel(tempsalles.afficher());
+    QString taille = ui->lineEdit_supp_chaise->text();
+  ui->tableView_4->setModel(tempsalles.afficher_taille(taille));
+}
+
+void gestion_salles::on_pushButton_6_clicked()
+{
+    ui->tableView->setModel(tempsalles.afficher());
+    QString taille = ui->lineEdit_id->text();
+  ui->tableView_5->setModel(tempsalles.afficher_taille(taille));
+}

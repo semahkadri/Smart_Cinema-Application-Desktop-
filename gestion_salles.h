@@ -26,6 +26,14 @@ private slots:
 
     void on_checkBox_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::gestion_salles *ui;
     cruds_salles tempsalles;

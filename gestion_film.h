@@ -36,6 +36,15 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+
+    void on_pushButton_chercher_clicked();
+
+    void on_pushButton_chercher_2_clicked();
+
+    void on_pushButton_modif_clicked();
+
+    void on_imprimer_clicked();
+
 private:
     Ui::gestion_film *ui;
     cruds_films tempfilm;

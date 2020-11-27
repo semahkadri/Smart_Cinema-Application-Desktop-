@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>gestion_salles</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image:url(:/caca.jpg);</string>
@@ -40,56 +40,91 @@ background-image:url(:/caca.jpg);
 }
 #ajouter_chaise
 {
-color:white;
-background:#000000;
+color:black;
 border-radius:60px;
+background:#a50000;
 }
 #ajouter_chaise:hover
 {
-color:black;
+color:white;
+background:#000000;
 border-radius:60px;
-background:#a50000;
 }
 #pushButton_supprimer_chaise
 {
-color:white;
-background:#000000;
+color:black;
 border-radius:60px;
+background:#a50000;
 }
 #pushButton_supprimer_chaise:hover
 {
-color:black;
+color:white;
+background:#000000;
 border-radius:60px;
-background:#a50000;
 }
 #pushButton
 {
-color:white;
-background:#000000;
+color:black;
 border-radius:60px;
+background:#a50000;
 }
 #pushButton:hover
 {
+color:white;
+background:#000000;
+border-radius:60px;
+}
+#pushButton_modifier
+{
 color:black;
 border-radius:60px;
 background:#a50000;
 }
-#pushButton_modifier
+#pushButton_modifier:hover
 {
 color:white;
 background:#000000;
 border-radius:60px;
 }
-#pushButton_modifier:hover
+#pushButton_4
 {
 color:black;
 border-radius:60px;
-background:#a50000;
+background:#99007f;
 }
-</string>
+#pushButton_4:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}
+#pushButton_5
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#pushButton_5:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}
+#pushButton_6
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#pushButton_6:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}</string>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -167,11 +202,74 @@ background:#a50000;
     <widget class="QPushButton" name="ajouter_chaise">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>110</y>
-       <width>81</width>
+       <x>360</x>
+       <y>40</y>
+       <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+*{
+background:#aaaa7f;
+font-family:century gothic;
+font-size:15px;
+
+}
+QGroupBox
+{
+background:#333;
+background-image:url(:/caca.jpg);
+}
+#ajouter_chaise
+{
+color:black;
+border-radius:60px;
+background:#a50000;
+}
+#ajouter_chaise:hover
+{
+color:white;
+background:#000000;
+border-radius:60px;
+}
+#pushButton_supprimer_chaise
+{
+color:black;
+border-radius:60px;
+background:#a50000;
+}
+#pushButton_supprimer_chaise:hover
+{
+color:white;
+background:#000000;
+border-radius:60px;
+}
+#pushButton
+{
+color:black;
+border-radius:60px;
+background:#a50000;
+}
+#pushButton:hover
+{
+color:white;
+background:#000000;
+border-radius:60px;
+}
+#pushButton_modifier
+{
+color:black;
+border-radius:60px;
+background:#a50000;
+}
+#pushButton_modifier:hover
+{
+color:white;
+background:#000000;
+border-radius:60px;
+}
+</string>
      </property>
      <property name="text">
       <string>AJOUTER</string>
@@ -197,6 +295,53 @@ background:#a50000;
        <y>180</y>
        <width>113</width>
        <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>90</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+
+}
+QGroupBox
+{
+background:#333;
+background-image:url(:/caca.jpg);
+}
+#pushButton_3
+{
+color:black;
+background:#a50000;
+border-radius:60px;
+}
+#pushButton_3:hover
+{
+color:white;
+border-radius:60px;
+background:#000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_3">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>140</y>
+       <width>381</width>
+       <height>81</height>
       </rect>
      </property>
     </widget>
@@ -231,14 +376,61 @@ background:#a50000;
     <widget class="QPushButton" name="pushButton_supprimer_chaise">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>170</y>
-       <width>101</width>
+       <x>390</x>
+       <y>70</y>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
       <string>SUPPRIMER</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+
+}
+QGroupBox
+{
+background:#333;
+background-image:url(:/caca.jpg);
+}
+#pushButton_3
+{
+color:black;
+background:#a50000;
+border-radius:60px;
+}
+#pushButton_3:hover
+{
+color:white;
+border-radius:60px;
+background:#000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_4">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>140</y>
+       <width>411</width>
+       <height>81</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -382,14 +574,136 @@ background:#a50000;
     <widget class="QPushButton" name="pushButton_modifier">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>110</y>
-       <width>81</width>
+       <x>440</x>
+       <y>50</y>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
       <string>MODIFIER</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>120</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+
+}
+QGroupBox
+{
+background:#333;
+background-image:url(:/caca.jpg);
+}
+#pushButton_3
+{
+color:black;
+background:#a50000;
+border-radius:60px;
+}
+#pushButton_3:hover
+{
+color:white;
+border-radius:60px;
+background:#000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_5">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>160</y>
+       <width>351</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>CHERCHER</string>
+    </attribute>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>cherrcher par ID:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>110</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+font-family:century gothic;
+font-size:24px;
+
+}
+QGroupBox
+{
+background:#333;
+background-image:url(:/caca.jpg);
+}
+#pushButton_3
+{
+color:black;
+background:#a50000;
+border-radius:60px;
+}
+#pushButton_3:hover
+{
+color:white;
+border-radius:60px;
+background:#000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>461</width>
+       <height>211</height>
+      </rect>
      </property>
     </widget>
    </widget>

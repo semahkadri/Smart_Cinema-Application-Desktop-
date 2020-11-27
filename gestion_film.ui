@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>gestion_films</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image:url(:/caca.jpg);
@@ -99,10 +99,58 @@ border-radius:60px;
 color:white;
 border-radius:60px;
 background:#000000;
+}
+#pushButton_chercher
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#pushButton_chercher:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}
+#pushButton_chercher_2
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#pushButton_chercher_2:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}
+#pushButton_modif
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#pushButton_modif:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
+}
+#imprimer
+{
+color:black;
+border-radius:60px;
+background:#99007f;
+}
+#imprimer:hover
+{
+color:white;
+background:#ff5500;
+border-radius:60px;
 }</string>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -204,7 +252,7 @@ background:#000000;
      <property name="geometry">
       <rect>
        <x>410</x>
-       <y>100</y>
+       <y>40</y>
        <width>121</width>
        <height>31</height>
       </rect>
@@ -286,6 +334,32 @@ background:#a50000;
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_chercher">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>110</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>CHERCHER</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_3">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>160</y>
+       <width>371</width>
+       <height>71</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -317,8 +391,8 @@ background:#a50000;
     <widget class="QPushButton" name="pushButton_supprimer">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>170</y>
+       <x>340</x>
+       <y>70</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -377,6 +451,29 @@ background:#a50000;
       <string>SUPPRIMER</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_chercher_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>180</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CHERCHER</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_4">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>160</y>
+       <width>351</width>
+       <height>71</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -390,32 +487,6 @@ background:#a50000;
        <width>491</width>
        <height>261</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>30</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>MAILING</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>110</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>STATISTIQUE</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
@@ -468,6 +539,22 @@ background:#a50000;
      </property>
      <property name="text">
       <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="imprimer">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>70</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>IMPRIMER</string>
      </property>
     </widget>
    </widget>
@@ -594,7 +681,7 @@ background:#a50000;
      <property name="geometry">
       <rect>
        <x>440</x>
-       <y>110</y>
+       <y>40</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -627,24 +714,34 @@ background:#000000;
       <string>MODIFIER</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_modif">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>110</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CHERCHER</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_5">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>160</y>
+       <width>341</width>
+       <height>71</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_5">
     <attribute name="title">
      <string>CHERCHER</string>
     </attribute>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>10</y>
-       <width>141</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>cherrcher par ID:</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
@@ -700,6 +797,19 @@ background:#000000;
        <width>421</width>
        <height>211</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>cherrcher par ID:</string>
      </property>
     </widget>
    </widget>

@@ -8,6 +8,12 @@
 #include <QThread>
 #include<QPixmap>
 #include <QGridLayout>
+//
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QtPrintSupport>
+//
+
 gestion_film::gestion_film(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gestion_film)
@@ -15,6 +21,8 @@ gestion_film::gestion_film(QWidget *parent) :
     ui->setupUi(this);
     ui->tableView->setModel(tempfilm.afficher());
     player= new QMediaPlayer(this);
+
+
 }
 
 gestion_film::~gestion_film()
@@ -154,7 +162,41 @@ void gestion_film::on_pushButton_3_clicked()
      ui->tableView->setModel(tempfilm.afficher());
     QString nom = ui->lineEdit->text();
    ui->tableView_2->setModel(tempfilm.afficher_nom(nom));
+}
+
+void gestion_film::on_pushButton_chercher_clicked()
+{
+    ui->tableView->setModel(tempfilm.afficher());
+    QString nom = ui->lineEdit_id_film->text();
+      ui->tableView_3->setModel(tempfilm.afficher_nom(nom));
+}
+
+void gestion_film::on_pushButton_chercher_2_clicked()
+{
+    ui->tableView->setModel(tempfilm.afficher());
+    QString nom = ui->lineEdit_supp->text();
+      ui->tableView_4->setModel(tempfilm.afficher_nom(nom));
+}
+
+void gestion_film::on_pushButton_modif_clicked()
+{
+    ui->tableView->setModel(tempfilm.afficher());
+    QString nom = ui->lineEdit_id->text();
+      ui->tableView_5->setModel(tempfilm.afficher_nom(nom));
+}
 
 
+
+void gestion_film::on_imprimer_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/imprimer.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(1);
+        QPrinter printer;
+            printer.setPrinterName("diserter printer name");
+            QPrintDialog dialog(&printer,this);
+            if(dialog.exec()==QDialog::Rejected)return;
+            ui->tableView->render(&printer);
 
 }

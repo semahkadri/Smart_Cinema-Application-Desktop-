@@ -23,6 +23,7 @@ public:
        QSqlQueryModel *afficher();
         bool modifier();
         QSqlQueryModel *trier_id();
+        QSqlQueryModel *afficher_taille(QString);
 
 };
 

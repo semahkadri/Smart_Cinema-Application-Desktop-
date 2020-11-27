@@ -7,6 +7,7 @@
 #include <QMediaPlayer>
 #include <QVideoWidget>
 #include <QMediaPlaylist>
+#include "login.h"
 int main(int argc, char *argv[])
 {
 
@@ -23,24 +24,31 @@ int main(int argc, char *argv[])
       QThread::sleep(6);
       VW->close();
     //
+
       player= new QMediaPlayer;
         player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/bienvenue.mp3"));
             player->play();
             qDebug()<<player->errorString();
             //
+            /*
             QMediaPlaylist *playlist = new QMediaPlaylist();
                 playlist->addMedia(QUrl("C:/Users/user/Desktop/projet c++/QT/gestion_films/la.mp3"));
                 playlist->setPlaybackMode(QMediaPlaylist::Loop);
                 QMediaPlayer *music = new QMediaPlayer();
                 music->setPlaylist(playlist);
-                music->setVolume(1);
+                music->setVolume(10);
                 music->play();
 
+*/
 
-        //
 
     MainWindow w;
-    w.show();
+    /*w.show();*/
+    //
+    login l;
+    l.show();
+    QObject::connect(&l,&login::sig,&w,&MainWindow::show);
+   //
     connexion c;
     bool test=c.create_cnx();
         if(test)

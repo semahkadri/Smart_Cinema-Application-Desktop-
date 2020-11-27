@@ -40,6 +40,20 @@ QSqlQueryModel * cruds_salles::afficher()
     model->setHeaderData(3,Qt::Horizontal,"ID");
     return model ;
 }
+//
+QSqlQueryModel * cruds_salles::afficher_taille(QString taille)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery("select * from GESTIONN WHERE id = '"+taille+"'");
+    model->setHeaderData(0,Qt::Horizontal,"NOM");
+    model->setHeaderData(1,Qt::Horizontal,"DUREE");
+    model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
+    model->setHeaderData(3,Qt::Horizontal,"TYPE");
+    model->setHeaderData(4,Qt::Horizontal,"ID");
+    return model ;
+}
+
+//
 bool cruds_salles::modifier()
 {
     QSqlQuery query;
