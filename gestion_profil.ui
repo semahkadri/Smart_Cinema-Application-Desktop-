@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>671</width>
-    <height>338</height>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,6 +41,13 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>AJOUTER</string>
      </property>
@@ -50,9 +57,16 @@
       <rect>
        <x>60</x>
        <y>40</y>
-       <width>71</width>
+       <width>101</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>ID_PROFIL</string>
@@ -83,9 +97,16 @@
       <rect>
        <x>70</x>
        <y>110</y>
-       <width>47</width>
-       <height>14</height>
+       <width>91</width>
+       <height>16</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>POSTE</string>
@@ -111,9 +132,16 @@
       <rect>
        <x>330</x>
        <y>170</y>
-       <width>81</width>
+       <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>SUPPRIMER</string>
@@ -144,9 +172,16 @@
       <rect>
        <x>420</x>
        <y>160</y>
-       <width>81</width>
+       <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>MODIFIER</string>
@@ -161,6 +196,13 @@
        <height>16</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string> ID PROFIL</string>
      </property>
@@ -170,9 +212,16 @@
       <rect>
        <x>40</x>
        <y>90</y>
-       <width>131</width>
+       <width>141</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>NOUVELLE POSTE</string>

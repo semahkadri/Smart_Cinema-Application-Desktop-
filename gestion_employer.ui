@@ -17,13 +17,13 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>30</y>
+     <y>40</y>
      <width>611</width>
      <height>301</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -32,11 +32,18 @@
     <widget class="QLabel" name="label_id_employer">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>0</x>
        <y>20</y>
-       <width>61</width>
+       <width>111</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>ID_EMPLOYER</string>
@@ -45,7 +52,7 @@
     <widget class="QLineEdit" name="lineEditidemp">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>180</x>
        <y>20</y>
        <width>113</width>
        <height>20</height>
@@ -55,11 +62,18 @@
     <widget class="QLabel" name="label_nom_employer">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>0</x>
        <y>70</y>
-       <width>71</width>
+       <width>131</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>NOM_EMPLOYER</string>
@@ -68,11 +82,18 @@
     <widget class="QLabel" name="label_prenom_employer">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>120</y>
-       <width>81</width>
+       <width>171</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>PRENOM_EMPLOYER</string>
@@ -81,11 +102,18 @@
     <widget class="QLabel" name="label_mail_employer">
      <property name="geometry">
       <rect>
-       <x>16</x>
+       <x>0</x>
        <y>170</y>
-       <width>61</width>
+       <width>121</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>MAIL_EPLOYER</string>
@@ -94,7 +122,7 @@
     <widget class="QLineEdit" name="lineEditnomemp">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>180</x>
        <y>70</y>
        <width>113</width>
        <height>20</height>
@@ -104,7 +132,7 @@
     <widget class="QLineEdit" name="lineEditprenomemp">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>180</x>
        <y>120</y>
        <width>113</width>
        <height>20</height>
@@ -114,7 +142,7 @@
     <widget class="QLineEdit" name="lineEditmailemp">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>180</x>
        <y>170</y>
        <width>113</width>
        <height>20</height>
@@ -130,6 +158,13 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>AJOUTER</string>
      </property>
@@ -137,11 +172,31 @@
     <widget class="QLineEdit" name="lineEditidprofil11">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>180</x>
        <y>220</y>
        <width>113</width>
        <height>20</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>220</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ID_PROFIL</string>
      </property>
     </widget>
    </widget>
@@ -152,11 +207,18 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>50</x>
        <y>70</y>
-       <width>121</width>
+       <width>141</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>ID_EMPLOYER:</string>
@@ -175,11 +237,18 @@
     <widget class="QPushButton" name="pushButton_supprimer">
      <property name="geometry">
       <rect>
-       <x>330</x>
+       <x>290</x>
        <y>170</y>
-       <width>81</width>
+       <width>121</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>SUPPRIMER</string>
@@ -204,7 +273,7 @@
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>30</y>
+       <y>10</y>
        <width>75</width>
        <height>23</height>
       </rect>
@@ -222,6 +291,13 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>nom</string>
      </property>
@@ -235,6 +311,13 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>prenom</string>
      </property>
@@ -247,6 +330,13 @@
        <width>75</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>ID</string>
@@ -285,11 +375,18 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>360</x>
        <y>50</y>
-       <width>121</width>
+       <width>151</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>CHERCHER PAR NOM</string>
@@ -298,11 +395,18 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>376</x>
+       <x>360</x>
        <y>110</y>
-       <width>131</width>
+       <width>171</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>CHERCHER PAR PRENOM</string>
@@ -311,11 +415,18 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>370</x>
        <y>160</y>
-       <width>121</width>
+       <width>141</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>CHERCHER PAR ID</string>
@@ -326,9 +437,16 @@
       <rect>
        <x>390</x>
        <y>230</y>
-       <width>111</width>
+       <width>141</width>
        <height>18</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>TRIER PAR NOM</string>
@@ -343,6 +461,13 @@
        <height>18</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>TRIER PAR ID</string>
      </property>
@@ -352,9 +477,16 @@
       <rect>
        <x>390</x>
        <y>250</y>
-       <width>131</width>
+       <width>161</width>
        <height>18</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>TRIER PAR PRENOM</string>
@@ -368,11 +500,18 @@
     <widget class="QLabel" name="label_nom_film_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>0</x>
        <y>40</y>
-       <width>101</width>
+       <width>161</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>NOM EMPLOYER</string>
@@ -381,11 +520,18 @@
     <widget class="QLabel" name="label_prenom_employer_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>80</y>
-       <width>101</width>
+       <x>0</x>
+       <y>90</y>
+       <width>161</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>PRENOM EMPLOYER</string>
@@ -394,11 +540,18 @@
     <widget class="QLabel" name="label_mail_employer_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>120</y>
-       <width>121</width>
+       <x>0</x>
+       <y>130</y>
+       <width>141</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>MAIL EMPLOYER</string>
@@ -407,11 +560,18 @@
     <widget class="QLabel" name="label_id_employer_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>200</y>
+       <x>0</x>
+       <y>190</y>
        <width>101</width>
        <height>16</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>ID_EMPLOYER:</string>
@@ -420,7 +580,7 @@
     <widget class="QLineEdit" name="lineEditnomempM">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>200</x>
        <y>40</y>
        <width>113</width>
        <height>20</height>
@@ -430,8 +590,8 @@
     <widget class="QLineEdit" name="lineEditprenomempM">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>80</y>
+       <x>200</x>
+       <y>90</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -440,8 +600,8 @@
     <widget class="QLineEdit" name="lineEditmailempM">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>120</y>
+       <x>200</x>
+       <y>130</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -450,8 +610,8 @@
     <widget class="QLineEdit" name="lineEditidempM">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>200</y>
+       <x>200</x>
+       <y>180</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -465,6 +625,13 @@
        <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>MODIFIER</string>

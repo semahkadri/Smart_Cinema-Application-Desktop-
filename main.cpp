@@ -17,10 +17,16 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     MainWindow w;
+    w.setWindowTitle("  Smart Cinema");
    // w.show();
+    QGuiApplication::setWindowIcon(QIcon("D:/OneDrive/Bureau/smart logo/logo.jpg"));
+
+
     login l;
         l.show();
+         l.setWindowTitle("  Login ");
         QObject::connect(&l,&login::sig,&w,&MainWindow::show);
+
     connexion c;
     bool test=c.create_cnx();
     if(test)
@@ -28,6 +34,7 @@ int main(int argc, char *argv[])
         QMessageBox::information(nullptr,QObject::tr("database is open"),
                                  QObject::tr("connexion etablie"),QMessageBox::Ok);
         //qDebug() <<"connexion etablie";
+
     }
     else
     {
