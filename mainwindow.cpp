@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "employer.h"
-
+#include "cruds_employer.h"
+#include <QThread>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -15,53 +15,40 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_gereremployer_clicked()
+void MainWindow::on_pushButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    QMediaPlayer* player;
+    player= new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/quitter.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(2);
+
+    close();
 }
 
-void MainWindow::on_home_clicked()
+void MainWindow::on_pushButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    QMediaPlayer* player;
+    player= new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/gestion des films.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(1);
+
+    gf=new gestion_employer(this);
+    gf->show();
 }
 
-void MainWindow::on_gererprofil_clicked()
+void MainWindow::on_pushButton_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
-}
+    QMediaPlayer* player;
+    player= new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/gestion des salles.mp3"));
+        player->play();
+        qDebug()<<player->errorString();
+        QThread::sleep(1);
 
-void MainWindow::on_ajouteremployer_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(3);
-}
-
-void MainWindow::on_pushButtoncancel_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-}
-
-void MainWindow::on_pushButtoncancelprofil_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
-
-void MainWindow::on_ajouterprofil_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-}
-
-void MainWindow::on_pushButtonok_clicked()
-{
-int idemp = ui-> lineEditidemp ->text().toInt();
-QString nomemp = ui->lineEditnomemp->text();
-QString prenomemp = ui->lineEditprenomemp->text();
-QString mailemp = ui->lineEditmailemp->text();
-employer e(idemp,nomemp,prenomemp,mailemp);
-
-bool test = e.ajouter();
-if (test)
-{
-    QMessageBox::information(nullptr,"Ajout employer","employer ajouté !");
-}
-
+    gs=new gestion_profil(this);
+    gs->show();
 }

@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include"employer.h"
-#include<QMessageBox>
+#include "gestion_employer.h"
+#include "gestion_profil.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -17,23 +17,16 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_gereremployer_clicked();
+    void on_pushButton_3_clicked();
 
-    void on_home_clicked();
+    void on_pushButton_clicked();
 
-    void on_gererprofil_clicked();
-
-    void on_ajouteremployer_clicked();
-
-    void on_pushButtoncancel_clicked();
-
-    void on_pushButtoncancelprofil_clicked();
-
-    void on_ajouterprofil_clicked();
-
-    void on_pushButtonok_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
+    gestion_employer *gf;
+    gestion_profil *gs;
+
 };
 #endif // MAINWINDOW_H

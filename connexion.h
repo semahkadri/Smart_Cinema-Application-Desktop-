@@ -4,10 +4,9 @@
 
 class connexion
 {
-    QSqlDatabase db;
 public:
     connexion();
-    bool creat_cnx();
+     bool create_cnx();
 };
 
 #endif // CONNEXION_H
