@@ -41,10 +41,7 @@ void gestion_employer::on_ajouter_employer_clicked()
     bool test = c.ajouter();
     if (test)
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film ajouter.mp3"));
-            player->play();
-            qDebug()<<player->errorString();
-            QThread::sleep(1);
+
         ui->tableView->setModel(tempemployer.afficher());
         QMessageBox::information(nullptr,"AJOUT EMPLOYER","EMPLOYER AJOUTEE");
     }
@@ -61,17 +58,14 @@ void gestion_employer::on_pushButton_supprimer_clicked()
     bool test = tempemployer.supprimer(i);
     if (test)
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film supprimer.mp3"));
-            player->play();
-            qDebug()<<player->errorString();
-            QThread::sleep(1);
+
         ui->tableView->setModel(tempemployer.afficher());
-        QMessageBox::information(nullptr,"SUPPRIMER FILM","FILM SUPPRIMER !");
+        QMessageBox::information(nullptr,"SUPPRIMER EMPLOYER","EMPLOYER SUPPRIMER !");
     }
     else
     {
 
-        QMessageBox::warning(nullptr,"SUPPRIMER FILM","FILM NON SUPPRIMER !");
+        QMessageBox::warning(nullptr,"SUPPRIMER EMPLOYER","EMPLOYER NON SUPPRIMER !");
     }
 }
 void gestion_employer::on_pushButton_modifier_clicked()
@@ -88,10 +82,7 @@ void gestion_employer::on_pushButton_modifier_clicked()
     bool test = c.modifier();
          if (test)
          {
-             player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/film modifier.mp3"));
-                 player->play();
-                 qDebug()<<player->errorString();
-                 QThread::sleep(1);
+
              ui->tableView->setModel(tempemployer.afficher());
              QMessageBox::information(nullptr,"MODIFER CLIENT","MODFIER AJOUTEE");
          }
@@ -136,7 +127,7 @@ void gestion_employer::on_checkBoxnom_clicked()
 
           else
           {
-              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+              QMessageBox::critical(nullptr, QObject::tr("trier NOM"),
                                     QObject::tr("Erreur !.\n"));
           }
 }
@@ -154,7 +145,7 @@ void gestion_employer::on_checkBoxid_clicked()
 
           else
           {
-              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+              QMessageBox::critical(nullptr, QObject::tr("trier ID"),
                                     QObject::tr("Erreur !.\n"));
           }
 }
@@ -170,7 +161,7 @@ void gestion_employer::on_checkBoxprenom_clicked()
 
           else
           {
-              QMessageBox::critical(nullptr, QObject::tr("trier evenement"),
+              QMessageBox::critical(nullptr, QObject::tr("trier PRENOM"),
                                     QObject::tr("Erreur !.\n"));
           }
 }

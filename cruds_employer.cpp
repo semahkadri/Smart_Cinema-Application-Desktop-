@@ -66,8 +66,8 @@ QSqlQueryModel * cruds_employer::afficher_nom(QString nomemp)
     model->setHeaderData(0,Qt::Horizontal,"id");
     model->setHeaderData(1,Qt::Horizontal,"nom");
     model->setHeaderData(2,Qt::Horizontal,"prenom");
-    model->setHeaderData(3,Qt::Horizontal,"description");
-    model->setHeaderData(4,Qt::Horizontal,"mail");
+    model->setHeaderData(3,Qt::Horizontal,"mail");
+    model->setHeaderData(4,Qt::Horizontal,"idprofil");
     return model ;
 }
 QSqlQueryModel * cruds_employer::afficher_prenom(QString prenomemp)
@@ -77,8 +77,8 @@ QSqlQueryModel * cruds_employer::afficher_prenom(QString prenomemp)
     model->setHeaderData(0,Qt::Horizontal,"id");
     model->setHeaderData(1,Qt::Horizontal,"nom");
     model->setHeaderData(2,Qt::Horizontal,"prenom");
-    model->setHeaderData(3,Qt::Horizontal,"description");
-    model->setHeaderData(4,Qt::Horizontal,"mail");
+    model->setHeaderData(3,Qt::Horizontal,"mail");
+    model->setHeaderData(4,Qt::Horizontal,"idprofil");
     return model ;
 }
 QSqlQueryModel * cruds_employer::afficher_id(QString nom)
@@ -88,40 +88,40 @@ QSqlQueryModel * cruds_employer::afficher_id(QString nom)
     model->setHeaderData(0,Qt::Horizontal,"id");
     model->setHeaderData(1,Qt::Horizontal,"nom");
     model->setHeaderData(2,Qt::Horizontal,"prenom");
-    model->setHeaderData(3,Qt::Horizontal,"description");
-    model->setHeaderData(4,Qt::Horizontal,"mail");
+    model->setHeaderData(3,Qt::Horizontal,"mail");
+    model->setHeaderData(4,Qt::Horizontal,"idprofil");
     return model ;
 }
 QSqlQueryModel * cruds_employer::trier_id()
 {
     QSqlQueryModel *model = new QSqlQueryModel();
         model->setQuery("SELECT * from GEREEMPLOYER ORDER BY idemp");
-        model->setHeaderData(0,Qt::Horizontal,"NOM");
-        model->setHeaderData(1,Qt::Horizontal,"DUREE");
-        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
-        model->setHeaderData(3,Qt::Horizontal,"TYPE");
-        model->setHeaderData(4,Qt::Horizontal,"ID");
+        model->setHeaderData(0,Qt::Horizontal,"ID");
+        model->setHeaderData(1,Qt::Horizontal,"NOM");
+        model->setHeaderData(2,Qt::Horizontal,"PRENOM");
+        model->setHeaderData(3,Qt::Horizontal,"MAIL");
+        model->setHeaderData(4,Qt::Horizontal,"IDPROFIL");
         return model ;
 }
 QSqlQueryModel * cruds_employer::trier_nom()
 {
     QSqlQueryModel *model = new QSqlQueryModel();
         model->setQuery("SELECT * from GEREEMPLOYER ORDER BY nomemp");
-        model->setHeaderData(0,Qt::Horizontal,"NOM");
-        model->setHeaderData(1,Qt::Horizontal,"DUREE");
-        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
-        model->setHeaderData(3,Qt::Horizontal,"TYPE");
-        model->setHeaderData(4,Qt::Horizontal,"ID");
+        model->setHeaderData(0,Qt::Horizontal,"ID");
+        model->setHeaderData(1,Qt::Horizontal,"NOM");
+        model->setHeaderData(2,Qt::Horizontal,"PRENOM");
+        model->setHeaderData(3,Qt::Horizontal,"MAIL");
+        model->setHeaderData(4,Qt::Horizontal,"IDPROFIL");
         return model ;
 }
 QSqlQueryModel * cruds_employer::trier_prenom()
 {
     QSqlQueryModel *model = new QSqlQueryModel();
         model->setQuery("SELECT * from GEREEMPLOYER ORDER BY prenomemp");
-        model->setHeaderData(0,Qt::Horizontal,"NOM");
-        model->setHeaderData(1,Qt::Horizontal,"DUREE");
-        model->setHeaderData(2,Qt::Horizontal,"LANGUAGE");
-        model->setHeaderData(3,Qt::Horizontal,"TYPE");
-        model->setHeaderData(4,Qt::Horizontal,"ID");
+        model->setHeaderData(0,Qt::Horizontal,"ID");
+        model->setHeaderData(1,Qt::Horizontal,"NOM");
+        model->setHeaderData(2,Qt::Horizontal,"PRENOM");
+        model->setHeaderData(3,Qt::Horizontal,"MAIL");
+        model->setHeaderData(4,Qt::Horizontal,"IDPROFIL");
         return model ;
 }

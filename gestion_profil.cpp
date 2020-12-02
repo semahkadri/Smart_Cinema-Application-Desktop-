@@ -32,10 +32,7 @@ void gestion_profil::on_ajouter_clicked()
      bool test = c.ajouter();
      if (test)
      {
-         player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/chaise ajouter.mp3"));
-             player->play();
-             qDebug()<<player->errorString();
-             QThread::sleep(1);
+
          ui->tableView->setModel(tempsalles.afficher());
          QMessageBox::information(nullptr,"AJOUT PROFIL","PROFIL AJOUTEE");
      }
@@ -51,10 +48,7 @@ void gestion_profil::on_pushButton_supprimer_clicked()
     bool test = tempsalles.supprimer(i);
     if (test)
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/chaise supprimer.mp3"));
-            player->play();
-            qDebug()<<player->errorString();
-            QThread::sleep(1);
+
         ui->tableView->setModel(tempsalles.afficher());
         QMessageBox::information(nullptr,"SUPPRIMER PROFIL","PROFIL SUPPRIMER !");
     }
@@ -75,10 +69,7 @@ void gestion_profil::on_pushButton_modifier_clicked()
      bool test = c.modifier();
      if (test)
      {
-         player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/chaise modifier.mp3"));
-             player->play();
-             qDebug()<<player->errorString();
-             QThread::sleep(1);
+
          ui->tableView->setModel(tempsalles.afficher());
          QMessageBox::information(nullptr,"MODIFIER PROFIL","PROFIL MODIFIER");
      }

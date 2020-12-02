@@ -8,23 +8,20 @@
 int main(int argc, char *argv[])
 {
 
-    QMediaPlayer* player;
-    player= new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/bienvenue.mp3"));
-        player->play();
-        qDebug()<<player->errorString();
-        QThread::sleep(1);
+
 
     QApplication a(argc, argv);
     MainWindow w;
     w.setWindowTitle("  Smart Cinema");
    // w.show();
-    QGuiApplication::setWindowIcon(QIcon("D:/OneDrive/Bureau/smart logo/logo.jpg"));
+    QGuiApplication::setWindowIcon(QIcon("D:/OneDrive/Bureau/smart logo/smart logo.jpg"));
 
 
     login l;
         l.show();
          l.setWindowTitle("  Login ");
+         QGuiApplication::setWindowIcon(QIcon("D:/OneDrive/Bureau/smart logo/smart logooooo.png"));
+
         QObject::connect(&l,&login::sig,&w,&MainWindow::show);
 
     connexion c;

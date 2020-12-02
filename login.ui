@@ -44,6 +44,9 @@
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
     </property>
+    <property name="placeholderText">
+     <string>Password</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEditusername">
     <property name="geometry">
@@ -53,6 +56,9 @@
       <width>113</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>user name</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_connect">

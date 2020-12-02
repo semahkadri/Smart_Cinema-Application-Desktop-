@@ -21,12 +21,7 @@ void login::on_pushButton_connect_clicked()
          QString password = ui->lineEditpassword->text();
          if(username == "hamza" && password =="hamza")
          {
-             QMediaPlayer* player;
-             player= new QMediaPlayer;
-             player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/connected.mp3"));
-                 player->play();
-                 qDebug()<<player->errorString();
-                 QThread::sleep(1);
+
              QMessageBox::information(this,"LOGIN","WELCOME");
              this->hide();
              MainWindow *newmain=new MainWindow();
@@ -34,12 +29,7 @@ void login::on_pushButton_connect_clicked()
          }
          else
          {
-             QMediaPlayer* player;
-             player= new QMediaPlayer;
-             player->setMedia(QUrl::fromLocalFile("C:/Users/user/Desktop/projet c++/QT/projet_finallll/failed.mp3"));
-                 player->play();
-                 qDebug()<<player->errorString();
-                 QThread::sleep(1);
+
                QMessageBox::warning(this,"LOGIN","CONNECTION FAILED");
 
          }
