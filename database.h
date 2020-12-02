@@ -26,17 +26,27 @@ class Database : public QObject
 private:
     QSqlDatabase db;
     bool loading;
-public slots:
+public :
+    void showparkingtable();
+    void addparking(QString,QString,QString);
+    bool deleteparking(int);
+    bool parkingmodified(int,QString,QString,QString);
     bool createconnect();
+    void fillcombobox();
     void closeconnection();
     bool loginconnection(QString,QString);
-    void showtable();
+    void showtable(int);
+    void showpvtable();
+    void addpvente(QString);
     void changetable();
-    bool updatetable(int,QString,QString,QString,QString);
-    bool deletetable(int);
-    void addproduct(QString,QString,QString,QString);
+    bool modifypv(int,QString);
+    bool deletepv(int);
+    bool updatetable(int, int , QString, QString, QString, QString);
+    bool deletetable(int,int);
+    void addproduct(QString, QString, QString, QString, int );
 public:
-    QTableWidget *table;
+    QTableWidget *table,*ptable,*pvtable;
+    QComboBox *selectpv;
     ~Database();
     explicit Database(QObject *parent = nullptr);
 

@@ -6,169 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>718</width>
-    <height>504</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Smart Cinema</string>
+   <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>0</y>
-      <width>631</width>
-      <height>471</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>century gothic</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButton
-{
-background:#2fec2f;
-border-radius:10px;
-}
-#pushButton:hover
-{
-color:#333;
-border-radius:60px;
-background:white;
-}
-#pushButton_2
-{
-background:#2fec2f;
-border-radius:10px;
-}
-#pushButton_2:hover
-{
-color:#333;
-border-radius:60px;
-background:white;
-}
-#pushButton_3
-{
-background:#2fec2f;
-border-radius:10px;
-}
-#pushButton_3:hover
-{
-color:#333;
-border-radius:60px;
-background:white;
-}
-
-</string>
-    </property>
-    <property name="title">
-     <string>ACCEUIL</string>
-    </property>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>140</y>
-       <width>281</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>century gothic</family>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>GESTION EMPLOYER</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>240</y>
-       <width>281</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>century gothic</family>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>GESTION PROFIL</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>511</width>
-       <height>461</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../smart logo/pnghut_photographic-film-cinema-logo-roll-elements_6msXbFU6Y4.png</pixmap>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>410</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>century gothic</family>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>EXIT</string>
-     </property>
-    </widget>
-    <zorder>label</zorder>
-    <zorder>pushButton</zorder>
-    <zorder>pushButton_2</zorder>
-    <zorder>pushButton_3</zorder>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>718</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QWidget" name="centralwidget"/>
  </widget>
  <resources/>
  <connections/>
