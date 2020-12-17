@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>caca.jpg</file>
-        <file>ba.jpg</file>
-    </qresource>
-</RCC>
