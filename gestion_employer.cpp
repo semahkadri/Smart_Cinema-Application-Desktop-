@@ -1,5 +1,5 @@
 #include "ui_gestion_employer.h"
-
+#include"dialog.h"
 #include "gestion_employer.h"
 #include <QString>
 #include "cruds_employer.h"
@@ -82,6 +82,11 @@ void gestion_employer::on_pushButton_modifier_clicked()
     bool test = c.modifier();
          if (test)
          {
+             player->setMedia(QUrl::fromLocalFile("D:/OneDrive/Bureau/administration/modifier.mp3"));
+                         player->play();
+                         qDebug()<<player->errorString();
+                         QThread::sleep(1);
+                     ui->tableView->setModel(tempemployer.afficher());
 
              ui->tableView->setModel(tempemployer.afficher());
              QMessageBox::information(nullptr,"MODIFER CLIENT","MODFIER AJOUTEE");
@@ -169,3 +174,12 @@ void gestion_employer::on_checkBoxprenom_clicked()
 
 
 
+
+
+
+
+void gestion_employer::on_pushButton_clicked()
+{
+    Dialog d;
+    d.exec();
+}

@@ -18,7 +18,7 @@ public:
     ~gestion_profil();
 
 private slots:
-    void on_ajouter_profil_clicked();
+
 
     void on_pushButton_supprimer_clicked();
 

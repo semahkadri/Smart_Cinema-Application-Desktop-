@@ -33,17 +33,16 @@ private slots:
 
     void on_id_clicked();
 
-    void on_checkBox_stateChanged(int arg1);
 
-    void on_checkBox_clicked();
 
-    void on_checkBox_nom_clicked();
+
 
     void on_checkBoxprenom_clicked();
 
     void on_checkBoxnom_clicked();
 
     void on_checkBoxid_clicked();
+
 
 private:
     Ui::gestion_employer *ui;
