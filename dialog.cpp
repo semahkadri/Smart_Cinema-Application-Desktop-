@@ -7,6 +7,7 @@
 
 
 
+
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -29,15 +30,15 @@ void Dialog::on_pushButton_envoyer_clicked()
 
 
 
-                    smtp.setUser("hamzachennnaoui.com");
+                    smtp.setUser("hamzachennnaoui@gmail.com");
                     smtp.setPassword("hamzititas12");
 
 
 
             MimeMessage message;
 
-            message.setSender(new EmailAddress("hamzachennnaoui.com", "hshhs"));
-            message.addRecipient(new EmailAddress(ui->lineEdit_adresse->text(), "Recipient's name"));
+            message.setSender(new EmailAddress("hamzachennnaoui@gmail.com", "chennaoui hamza"));
+            message.addRecipient(new EmailAddress(ui->lineEdit_adresse->text(), "Hamza CHENENAOUI"));
             message.setSubject(ui->lineEdit_objet->text());
 
 

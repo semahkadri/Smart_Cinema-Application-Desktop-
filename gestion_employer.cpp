@@ -41,6 +41,10 @@ void gestion_employer::on_ajouter_employer_clicked()
     bool test = c.ajouter();
     if (test)
     {
+        player->setMedia(QUrl::fromLocalFile("D:/OneDrive/Bureau/administration/employer ajouter.mp3"));
+                    player->play();
+                    qDebug()<<player->errorString();
+                    QThread::sleep(1);
 
         ui->tableView->setModel(tempemployer.afficher());
         QMessageBox::information(nullptr,"AJOUT EMPLOYER","EMPLOYER AJOUTEE");
@@ -58,6 +62,10 @@ void gestion_employer::on_pushButton_supprimer_clicked()
     bool test = tempemployer.supprimer(i);
     if (test)
     {
+        player->setMedia(QUrl::fromLocalFile("D:/OneDrive/Bureau/administration/employer supp.mp3"));
+                    player->play();
+                    qDebug()<<player->errorString();
+                    QThread::sleep(1);
 
         ui->tableView->setModel(tempemployer.afficher());
         QMessageBox::information(nullptr,"SUPPRIMER EMPLOYER","EMPLOYER SUPPRIMER !");
