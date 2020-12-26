@@ -9,6 +9,7 @@ CONFIG += c++11 console
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     connexion.cpp \
     cruds_employer.cpp \
     cruds_profil.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    arduino.h \
     connexion.h \
     cruds_employer.h \
     cruds_profil.h \

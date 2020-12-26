@@ -44,6 +44,8 @@ private slots:
     void on_checkBoxid_clicked();
 
 
+    void on_tableView_activated(const QModelIndex &index);
+
 private:
     Ui::gestion_employer *ui;
     cruds_employer tempemployer;

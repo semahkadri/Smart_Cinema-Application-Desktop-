@@ -31,7 +31,7 @@ void Dialog::on_pushButton_envoyer_clicked()
 
 
                     smtp.setUser("hamzachennnaoui@gmail.com");
-                    smtp.setPassword("hamza");
+                    smtp.setPassword("hamzititas12");
 
 
 

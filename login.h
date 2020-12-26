@@ -2,6 +2,7 @@
 #define LOGIN_H
 #include "mainwindow.h"
 #include <QDialog>
+#include "arduino.h"
 
 namespace Ui {
 class login;
@@ -20,6 +21,7 @@ private slots:
    //
     void on_pushButton_2_clicked();
 
+
 signals:
     void sig();
     //
@@ -28,6 +30,8 @@ private:
     //
     MainWindow *m;
     //
+    QByteArray data1;
+       Arduino A;
 };
 
 #endif // LOGIN_H
