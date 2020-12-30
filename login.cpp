@@ -51,10 +51,10 @@ void login::on_pushButton_connect_clicked()
 {
   data1= A.read_from_arduino();
 
-        QString username = ui->lineEditusername->text();
-         QString password = ui->lineEditpassword->text();
 
-         if(username == "" && password=="")
+
+
+         if( data1=="1" )
          {
 
              QMessageBox::information(this,"LOGIN","WELCOME");
@@ -62,13 +62,13 @@ void login::on_pushButton_connect_clicked()
              MainWindow *newmain=new MainWindow();
              newmain->show();
          }
-/*
-         else if (data1 != "5" )
+
+         else if (data1 == "2" )
          {
 
-               QMessageBox::warning(this,"LOGIN","CONNECTION FAILED");
+              QMessageBox::warning(this,"LOGIN","CONNECTION FAILED");
 
-         }*/
+         }
 }
 
 void login::on_pushButton_2_clicked()

@@ -31,13 +31,13 @@ void Dialog::on_pushButton_envoyer_clicked()
 
 
                     smtp.setUser("hamzachennnaoui@gmail.com");
-                    smtp.setPassword("hamzititas12");
+                    smtp.setPassword("hamza");
 
 
 
             MimeMessage message;
 
-            message.setSender(new EmailAddress("hamzachennnaoui@gmail.com", "Hamza CHENENAOUI"));
+            message.setSender(new EmailAddress("hamzachennnaoui@gmail.com", "hamza chennnaoui"));
             message.addRecipient(new EmailAddress(ui->lineEdit_adresse->text(), "chennaoui hamza"));
             message.setSubject(ui->lineEdit_objet->text());
 
