@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Wednesday-December-30-2020   
+--  File created - Monday-December-14-2020   
 --------------------------------------------------------
 DROP TABLE "ANOTHERONE"."ABONNEMENTS" cascade constraints;
 DROP TABLE "ANOTHERONE"."ACCOUNTS" cascade constraints;
